@@ -1,0 +1,81 @@
+EESchema Schematic File Version 4
+LIBS:CNC Shield-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x02_Female J46
+U 1 1 5CD3BB29
+P 6500 3000
+F 0 "J46" H 6450 3100 50  0000 L CNN
+F 1 "24V In" H 6400 2800 50  0000 L CNN
+F 2 "AAP_Connectors:Connector_2T-BLK" H 6500 3000 50  0001 C CNN
+F 3 "~" H 6500 3000 50  0001 C CNN
+	1    6500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0167
+U 1 1 5CD3BB80
+P 5750 2900
+F 0 "#PWR0167" H 5750 2750 50  0001 C CNN
+F 1 "+24V" H 5765 3073 50  0000 C CNN
+F 2 "" H 5750 2900 50  0001 C CNN
+F 3 "" H 5750 2900 50  0001 C CNN
+	1    5750 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0168
+U 1 1 5CD3BBB2
+P 5750 3250
+F 0 "#PWR0168" H 5750 3000 50  0001 C CNN
+F 1 "GND" H 5755 3077 50  0000 C CNN
+F 2 "" H 5750 3250 50  0001 C CNN
+F 3 "" H 5750 3250 50  0001 C CNN
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2950 5950 3000
+Wire Wire Line
+	5950 3000 6300 3000
+Wire Wire Line
+	6300 3100 5950 3100
+Wire Wire Line
+	5950 3100 5950 3200
+$Comp
+L Device:D_Small D6
+U 1 1 5CD3BC81
+P 5750 3050
+F 0 "D6" V 5704 3118 50  0000 L CNN
+F 1 "S1M" V 5800 2850 50  0000 L CNN
+F 2 "CNC Shield:DO-214AC" V 5750 3050 50  0001 C CNN
+F 3 "~" V 5750 3050 50  0001 C CNN
+	1    5750 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 3200 5750 3200
+Wire Wire Line
+	5750 3200 5750 3250
+Wire Wire Line
+	5750 3200 5750 3150
+Connection ~ 5750 3200
+Wire Wire Line
+	5750 2950 5950 2950
+Wire Wire Line
+	5750 2900 5750 2950
+Connection ~ 5750 2950
+$EndSCHEMATC

@@ -1,0 +1,165 @@
+EESchema Schematic File Version 4
+LIBS:CNC Shield-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay:G5LE-1 K1
+U 1 1 5CD39212
+P 5500 3700
+F 0 "K1" V 4933 3700 50  0000 C CNN
+F 1 "G5LE-1" V 5024 3700 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 5950 3650 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 5500 3300 50  0001 C CNN
+	1    5500 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J43
+U 1 1 5CD39284
+P 6950 4350
+F 0 "J43" H 6900 4450 50  0000 L CNN
+F 1 "SPINDLE" H 6850 4150 50  0000 L CNN
+F 2 "AAP_Connectors:Connector_2T-BLK" H 6950 4350 50  0001 C CNN
+F 3 "~" H 6950 4350 50  0001 C CNN
+	1    6950 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4350 6450 4350
+Wire Wire Line
+	6450 4350 6450 4000
+Wire Wire Line
+	6450 4000 5800 4000
+$Comp
+L power:GND #PWR0161
+U 1 1 5CD393EB
+P 6450 4700
+F 0 "#PWR0161" H 6450 4450 50  0001 C CNN
+F 1 "GND" H 6455 4527 50  0000 C CNN
+F 2 "" H 6450 4700 50  0001 C CNN
+F 3 "" H 6450 4700 50  0001 C CNN
+	1    6450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D5
+U 1 1 5CD39546
+P 6450 4450
+F 0 "D5" V 6404 4518 50  0000 L CNN
+F 1 "S1M" V 6450 4200 50  0000 L CNN
+F 2 "CNC Shield:DO-214AC" V 6450 4450 50  0001 C CNN
+F 3 "~" V 6450 4450 50  0001 C CNN
+	1    6450 4450
+	0    1    1    0   
+$EndComp
+Connection ~ 6450 4350
+Wire Wire Line
+	6450 4700 6450 4550
+Wire Wire Line
+	6450 4550 6700 4550
+Wire Wire Line
+	6700 4550 6700 4450
+Wire Wire Line
+	6700 4450 6750 4450
+Connection ~ 6450 4550
+$Comp
+L power:+24V #PWR0162
+U 1 1 5CD39653
+P 4750 3050
+F 0 "#PWR0162" H 4750 2900 50  0001 C CNN
+F 1 "+24V" H 4765 3223 50  0000 C CNN
+F 2 "" H 4750 3050 50  0001 C CNN
+F 3 "" H 4750 3050 50  0001 C CNN
+	1    4750 3050
+	1    0    0    -1  
+$EndComp
+Text Notes 7000 4450 0    50   ~ 0
+Spindle +\nSpindle -
+$Comp
+L Device:D_Small D4
+U 1 1 5CD39A62
+P 5450 3050
+F 0 "D4" H 5350 3150 50  0000 L CNN
+F 1 "S1M" H 5500 3150 50  0000 L CNN
+F 2 "CNC Shield:DO-214AC" V 5450 3050 50  0001 C CNN
+F 3 "~" V 5450 3050 50  0001 C CNN
+	1    5450 3050
+	1    0    0    -1  
+$EndComp
+Text GLabel 6750 3350 2    50   Input ~ 0
+SPINDLE_ENABLE
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 5CD39FEA
+P 6300 3350
+F 0 "Q1" H 6490 3396 50  0000 L CNN
+F 1 "BC847" H 6490 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6500 3275 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 6300 3350 50  0001 L CNN
+	1    6300 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3050 5100 3050
+Wire Wire Line
+	5100 3050 5100 3500
+Wire Wire Line
+	5100 3500 5200 3500
+Wire Wire Line
+	4750 3050 5100 3050
+Connection ~ 5100 3050
+Wire Wire Line
+	5200 3900 5100 3900
+Wire Wire Line
+	5100 3900 5100 3500
+Connection ~ 5100 3500
+Wire Wire Line
+	5800 3500 5850 3500
+Wire Wire Line
+	5850 3500 5850 3050
+Wire Wire Line
+	5850 3050 5550 3050
+Wire Wire Line
+	5850 3050 6200 3050
+Wire Wire Line
+	6200 3050 6200 3150
+Connection ~ 5850 3050
+$Comp
+L power:GND #PWR0163
+U 1 1 5CD3ACA4
+P 6200 3700
+F 0 "#PWR0163" H 6200 3450 50  0001 C CNN
+F 1 "GND" H 6205 3527 50  0000 C CNN
+F 2 "" H 6200 3700 50  0001 C CNN
+F 3 "" H 6200 3700 50  0001 C CNN
+	1    6200 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3550 6200 3700
+$Comp
+L Device:R_Small R55
+U 1 1 5CD3AF18
+P 6650 3350
+F 0 "R55" V 6550 3350 50  0000 C CNN
+F 1 "10K" V 6650 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6650 3350 50  0001 C CNN
+F 3 "~" H 6650 3350 50  0001 C CNN
+	1    6650 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 3350 6550 3350
+$EndSCHEMATC
